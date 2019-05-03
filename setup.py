@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Learn more: https://github.com/kennethreitz/setup.py
@@ -12,13 +13,13 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name='sample',
+    name='relocate',
     version='0.1.0',
-    description='Sample package for Python-Guide.org',
+    description='Relocate binary packages to a new directory',
     long_description=readme,
-    author='Kenneth Reitz',
-    author_email='me@kennethreitz.com',
-    url='https://github.com/kennethreitz/samplemod',
+    author='Mikhail Bautin',
+    author_email='mbautin@users.noreply.github.com',
+    url='https://github.com/yugabyte/relocate',
     license=license,
     packages=find_packages(exclude=('tests', 'docs'))
 )
