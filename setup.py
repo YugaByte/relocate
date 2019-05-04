@@ -5,6 +5,19 @@
 
 from setuptools import setup, find_packages
 
+tests_require = [
+    'nose',
+    'tox'
+]
+
+docs_require = [
+    'sphinx',
+    'sphinx_rtd_theme'
+]
+
+release_require = [
+    'twine',
+]
 
 with open('README.rst') as f:
     readme = f.read()
@@ -21,6 +34,11 @@ setup(
     author_email='mbautin@users.noreply.github.com',
     url='https://github.com/yugabyte/relocate',
     license=license,
-    packages=find_packages(exclude=('tests', 'docs'))
+    packages=find_packages(exclude=('tests', 'docs')),
+    extras_require={
+        'tests': tests_require,
+        'docs': docs_require,
+        'release': release_require
+    },
 )
 
