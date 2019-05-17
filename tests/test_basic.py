@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from .context import relocate
+from .context import ypack
 
 import unittest
 
