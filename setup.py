@@ -54,10 +54,6 @@ setup(
         'docs': docs_require,
         'release': release_require
     },
-    entry_points={
-        'console_scripts': [
-            'ypack = ypack.ypack_tool:main'
-        ]
-    }
+    scripts=['bin/ypack']
 )
 

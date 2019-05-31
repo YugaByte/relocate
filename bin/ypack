@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # Copyright (c) 2019 YugaByte, Inc.
@@ -12,14 +13,7 @@
 # or implied.  See the License for the specific language governing permissions and limitations under
 # the License.
 
-from . import helpers
+from ypack import ypack_tool
 
-def get_hmm():
-    """Get a thought."""
-    return 'hmmm...'
-
-
-def hmm():
-    """Contemplation..."""
-    if helpers.get_answer():
-        print(get_hmm())
+if __name__ == '__main__':
+    ypack_tool.main()

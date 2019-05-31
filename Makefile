@@ -14,8 +14,6 @@ SHELL:=bash
 
 .PHONY: docs list release setup test tox unit venv venv_tests venv_docs venv_release
 
-PROJECT_NAME := $( shell cat PROJECT_NAME )
-
 ACTIVATE_VENV := . venv/bin/activate
 RUN_TESTS := nosetests tests
 
@@ -49,10 +47,10 @@ venv_create:
 	fi
 
 venv_tests: venv_create
-	$(ACTIVATE_VENV) && pip install -e ".[tests]" 
+	$(ACTIVATE_VENV) && pip install --editable ".[tests]"
 
 venv_docs: venv_create
-	$(ACTIVATE_VENV) && pip install -e ".[docs]" 
+	$(ACTIVATE_VENV) && pip install --editable ".[docs]"
 
 venv_release: venv_release
-	$(ACTIVATE_VENV) && pip install -e ".[release]" 
+	$(ACTIVATE_VENV) && pip install --editable ".[release]"
